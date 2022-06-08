@@ -50,6 +50,7 @@ console.log((characterHeightAndName))
 const firstNames = characters.map((character) => character.name.split(" ")[0]);
 console.log("first Names Results " + firstNames)
 
+
 //***REDUCE***
 //1. Get total mass of all characters
 //2. Get total height of all characters
@@ -58,12 +59,29 @@ console.log("first Names Results " + firstNames)
 
 //***FILTER***
 //1. Get characters with mass greater than 100
-const overHundred = characters.filter((character) => character.mass > 100)
-console.log(("Over Hundred Results: " + overHundred))
+let overHundred = characters.filter((character) => character.mass <= 100)
+
+// Syntax example let result = parks.filter((park) => park.rating >= 4.5)
+
+console.log("overHundred Results: ")
+console.log(overHundred)
 
 //2. Get characters with height less than 200
+
+let LessTwoHundred = characters.filter((character) => character.mass < 200)
+console.log("LessTwoHundred Results")
+console.log(LessTwoHundred)
+
 //3. Get all male characters
+
+let allMale = characters.filter((character) => character.gender === "male")
+
+console.log(allMale)
+
 //4. Get all female characters
+let allFemale = characters.filter((character) => character.gender === "female")
+console.log("allFemale Results: ")
+console.log(allFemale)
 
 //***SORT***
 //1. Sort by mass
