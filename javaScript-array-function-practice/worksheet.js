@@ -53,10 +53,27 @@ console.log("first Names Results " + firstNames)
 
 //***REDUCE***
 //1. Get total mass of all characters
-//2. Get total height of all characters
-//3. Get total number of characters by eye color
-//4. Get total number of characters in all the character names
 
+let totalMass = characters.reduce((total,character) => {
+    return total + character.mass
+}, 0)
+console.log("total mass: ", totalMass)
+//2. Get total height of all characters
+
+let totalHeight = characters.reduce ((total, character) => {
+ return total + character.height
+}, 0)
+
+console.log("total charater height: ",totalHeight)
+//3. Get total number of characters by eye color
+
+
+//4. Get total number of characters in all the character names
+let allLetters = characters.reduce((total,character) => {
+   return  total + character.name.length
+}, 0)
+
+console.log("Total number of charaters: ", allLetters)
 //***FILTER***
 //1. Get characters with mass greater than 100
 let overHundred = characters.filter((character) => character.mass <= 100)
@@ -120,4 +137,4 @@ let twoHundredTall = characters.some((character) => character.height > 210)
 console.log(twoHundredTall)
 //4. Is there at least one character that has mass less than 50?
 let massLessFifty = characters.some((character) => character.mass < 50)
-console.log(massLessFifty)e
+console.log(massLessFifty)
