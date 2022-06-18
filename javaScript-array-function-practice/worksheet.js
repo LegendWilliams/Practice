@@ -91,12 +91,33 @@ console.log(allFemale)
 
 //***EVERY***
 //1. Does every character have blue eyes?
+
+let allBlueEyes = characters.every((character) => character.eye_color === "blue" )
+console.log(allBlueEyes)
+
 //2. Does every character have mass more than 40?
+let overFourty = characters.every((character) => character.mass > 40)
+console.log(overFourty)
+
 //3. Is every character shorter than 200?
+let shorter200 = characters.every((character) => character.height < 200)
+console.log(shorter200)
+
 //4. Is every character male?
+let everyMale = characters.every((character) => character.gender === "male")
+console.log(everyMale)
 
 //***SOME***
 //1. Is there at least one male character?
+
+let oneMan = characters.some((character) => character.gender === "male")
+console.log(oneMan)
 //2. Is there at least one character with blue eyes?
+let oneBlueEye = characters.some((character) => character.eye_color === "blue")
+console.log(oneBlueEye)
 //3. Is there at least one character taller than 210?
+let twoHundredTall = characters.some((character) => character.height > 210)
+console.log(twoHundredTall)
 //4. Is there at least one character that has mass less than 50?
+let massLessFifty = characters.some((character) => character.mass < 50)
+console.log(massLessFifty)e
