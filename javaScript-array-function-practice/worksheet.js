@@ -66,12 +66,16 @@ let totalHeight = characters.reduce ((total, character) => {
 
 console.log("total charater height: ",totalHeight)
 //3. Get total number of characters by eye color
-
-const eyeColorCount = characters.reduce((acc, character) => {
-    acc[park.name] = park.areaInSquareKm;
+const eyeColorTotals = characters.reduce((acc, character) => {
+    acc[character.eye_color] = acc[character.eye_color]
+      ? acc[character.eye_color] + 1
+      : 1;
+  
     return acc;
-  }, {})
-
+  }, {});
+  
+  console.log("number 3 reduce: :", eyeColorTotals);
+  
 
 //4. Get total number of characters in all the character names
 let allLetters = characters.reduce((total,character) => {
