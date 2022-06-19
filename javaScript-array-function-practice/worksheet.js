@@ -67,6 +67,11 @@ let totalHeight = characters.reduce ((total, character) => {
 console.log("total charater height: ",totalHeight)
 //3. Get total number of characters by eye color
 
+const eyeColorCount = characters.reduce((acc, character) => {
+    acc[park.name] = park.areaInSquareKm;
+    return acc;
+  }, {})
+
 
 //4. Get total number of characters in all the character names
 let allLetters = characters.reduce((total,character) => {
@@ -102,10 +107,22 @@ console.log(allFemale)
 
 //***SORT***
 //1. Sort by mass
+let byMass = characters.sort((characterA, characterB) => characterA.mass - characterB.mass);
+console.log("Sorted By Mass: ", byMass)
 //2. Sort by height
+
+let byHeight = characters.sort((characterA, characterB)=> characterA.height - characterB.height);
+console.log("Sorted By Height: ", byHeight)
+
+
 //3. Sort by name
+
+let byName = characters.sort((characterA,characterB) => characterA.name.toLowerCase() < characterB.name.toLowerCase() ? -1 : 1)
+console.log("Sorted By Name: ",byName)
 //4. Sort by gender
 
+let byGender = characters.sort((characterA, characterB) => characterA.gender < characterB.gender ? -1 : 1) 
+console.log("Sorted by Gender: ", byGender)
 //***EVERY***
 //1. Does every character have blue eyes?
 
